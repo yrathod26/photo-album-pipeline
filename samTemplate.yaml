@@ -16,7 +16,7 @@ Resources:
         SubnetIds:
          - subnet-0611eef784e7ca85a
         SecurityGroupIds:
-         - Ref: sg-09f7d9d23d7140860
+         - sg-09f7d9d23d7140860
   ImageSearch:
     Type: 'AWS::Serverless::Function'
     Properties:
@@ -31,4 +31,4 @@ Resources:
         SubnetIds:
          - subnet-0611eef784e7ca85a
         SecurityGroupIds:
-         - Ref: sg-09f7d9d23d7140860
+         - sg-09f7d9d23d7140860
