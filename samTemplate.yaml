@@ -12,8 +12,8 @@ Resources:
       MemorySize: 128
       Timeout: 30
       Role: 'arn:aws:iam::636938905002:role/service-role/ImageIndexing-role-ed1rbua7'
-        VpcConfig:
-          SubnetIds:
-           - subnet-0611eef784e7ca85a
-          SecurityGroupIds:
-           - Ref: sg-09f7d9d23d7140860
+      VpcConfig:
+       SubnetIds:
+        - subnet-0611eef784e7ca85a
+       SecurityGroupIds:
+        - Ref: sg-09f7d9d23d7140860
