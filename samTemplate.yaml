@@ -2,6 +2,8 @@ AWSTemplateFormatVersion: '2010-09-09'
 Transform: 'AWS::Serverless-2016-10-31'
 Description: CD Demo Lambda
 Resources:
+  cc-hw3-photos:
+    Type: AWS::S3::Bucket
   ImageIndexing:
     Type: 'AWS::Serverless::Function'
     Properties:
@@ -16,7 +18,7 @@ Resources:
         S3FileListener:
           Type: S3
           Properties:
-            Bucket: cc-hw3-photos
+            Bucket: !Ref cc-hw3-photos
             Events: s3:ObjectCreated:*
       VpcConfig:
         SubnetIds:
