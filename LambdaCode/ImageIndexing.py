@@ -9,7 +9,7 @@ def lambda_handler(event, context):
     url_ES = "https://vpc-es-hw3-vtndw6jsxco2bkxcv3ugwu4zcm.us-east-1.es.amazonaws.com/es-hw3/labels"
     # url_ES = "https://vpc-es-hw3-vtndw6jsxco2bkxcv3ugwu4zcm.us-east-1.es.amazonaws.com/es-hw3/_search?q=man"
     image_name = event['Records'][0]['s3']['object']['key']
-    bucketName = "cc-hw3-photos"
+    bucketName = event['Records'][0]['s3']['bucket']['name']
     client = boto3.client('rekognition')
     response = client.detect_labels(
         Image={
