@@ -11,4 +11,4 @@ Resources:
       Description: 'Lambda function for CD Demo'
       MemorySize: 128
       Timeout: 30
-      Role: ''
+      Role: 'arn:aws:iam::636938905002:role/service-role/ImageIndexing-role-ed1rbua7'
